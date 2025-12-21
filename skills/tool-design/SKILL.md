@@ -149,11 +149,28 @@ def get_customer(customer_id: str, format: str = "concise"):
 ```
 
 **Example 2: Poor Tool Design**
+
+This example demonstrates several tool design anti-patterns:
+
 ```python
 def search(query):
     """Search the database."""
     pass
 ```
+
+**Problems with this design:**
+
+1. **Vague name**: "search" is ambiguous - search what, for what purpose?
+2. **Missing parameters**: What database? What format should query take?
+3. **No return description**: What does this function return? A list? A string? Error handling?
+4. **No usage context**: When should an agent use this versus other tools?
+5. **No error handling**: What happens if the database is unavailable?
+
+**Failure modes:**
+- Agents may call this tool when they should use a more specific tool
+- Agents cannot determine correct query format
+- Agents cannot interpret results
+- Agents cannot recover from failures
 
 ## Guidelines
 

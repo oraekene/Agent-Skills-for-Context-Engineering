@@ -2,19 +2,19 @@
 
 This document provides implementation details for multi-agent architectures across different frameworks.
 
-## Supervisor PatternGraph Supervisor Implementation
+## Supervisor Pattern
 
-### Lang
+### LangGraph Supervisor Implementation
 
 Implement a supervisor that routes to worker nodes:
 
 ```python
-from typing import Typed.graph import StateGraph, END
+from typing import TypedDict, Union
+from langgraph.graph import StateGraph, END
 
 class AgentState(TypedDict):
     task: str
-   Dict, Union
-from langgraph current_agent: str
+    current_agent: str
     task_output: dict
     messages: list
 

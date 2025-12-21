@@ -121,7 +121,7 @@ Implement these strategies through specific architectural patterns. Use just-in-
 ## Examples
 
 **Example 1: Detecting Degradation**
-```
+```yaml
 # Context grows during long conversation
 turn_1: 1000 tokens
 turn_5: 8000 tokens

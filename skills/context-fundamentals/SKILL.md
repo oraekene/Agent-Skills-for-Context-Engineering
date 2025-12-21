@@ -130,7 +130,7 @@ Explain non-obvious decisions in comments.
 ```
 
 **Example 2: Progressive Document Loading**
-```
+```markdown
 # Instead of loading all documentation at once:
 
 # Step 1: Load summary

@@ -125,30 +125,30 @@ Track how errors flow through context:
 def analyze_error_propagation(context, error_points):
     """
     Analyze how errors at specific points affect downstream context.
-    
+
     Returns visualization of error spread and impact assessment.
     """
     impact_map = {}
-    
+
     for error_point in error_points:
         # Find all references to content after error point
-        downstream_refs = find_references(context, after=        for ref in downstream_refs:
-            if ref not in impacterror_point)
-        
-_map:
+        downstream_refs = find_references(context, after=error_point)
+
+        for ref in downstream_refs:
+            if ref not in impact_map:
                 impact_map[ref] = []
             impact_map[ref].append({
                 "source": error_point,
                 "type": classify_error_type(context[error_point])
             })
-    
+
     # Assess severity
     high_impact_areas = [k for k, v in impact_map.items() if len(v) > 3]
-    
- "impact_map": impact_map,
+
+    return {
+        "impact_map": impact_map,
         "high_impact_areas": high_impact_areas,
-        "requires    return {
-       _intervention": len(high_impact_areas) > 0
+        "requires_intervention": len(high_impact_areas) > 0
     }
 ```
 

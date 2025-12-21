@@ -154,7 +154,7 @@ Mitigation: Validate agent outputs before passing to consumers. Implement retry 
 ## Examples
 
 **Example 1: Research Team Architecture**
-```
+```text
 Supervisor
 ├── Researcher (web search, document retrieval)
 ├── Analyzer (data analysis, statistics)
@@ -202,10 +202,10 @@ Internal skills:
 - [context-optimization](skills/context-optimization/) - Partitioning strategies
 
 External resources:
-- LangGraph documentation on multi-agent patterns
-- AutoGen GroupChat patterns
-- CrewAI hierarchical processes
-- Research on multi-agent coordination
+- [LangGraph Documentation](https://langchain-ai.github.io/langgraph/) - Multi-agent patterns and state management
+- [AutoGen Framework](https://microsoft.github.io/autogen/) - GroupChat and conversational patterns
+- [CrewAI Documentation](https://docs.crewai.com/) - Hierarchical agent processes
+- [Research on Multi-Agent Coordination](https://arxiv.org/abs/2308.00352) - Survey of multi-agent systems
 
 ---
 

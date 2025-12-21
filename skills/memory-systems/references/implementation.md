@@ -16,12 +16,14 @@ class VectorStore:
         self.dimension = dimension
         self.vectors = []
         self.metadata = []
-    
+        self.texts = []
+
     def add(self, text: str, metadata: Dict[str, Any] = None):
         """Add document to store."""
         embedding = self._embed(text)
         self.vectors.append(embedding)
         self.metadata.append(metadata or {})
+        self.texts.append(text)
         return len(self.vectors) - 1
     
     def search(self, query: str, limit: int = 5, 
@@ -74,7 +76,7 @@ class VectorStore:
     
     def _get_text(self, index: int) -> str:
         """Retrieve original text for index."""
-        return self.metadata[index].get("text", "")
+        return self.texts[index] if index < len(self.texts) else ""
 ```
 
 ### Metadata-Enhanced Vector Store
