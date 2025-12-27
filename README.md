@@ -96,7 +96,8 @@ The [examples](examples/) folder contains complete system designs that demonstra
 | Example | Description | Skills Applied |
 |---------|-------------|----------------|
 | [x-to-book-system](examples/x-to-book-system/) | Multi-agent system that monitors X accounts and generates daily synthesized books | multi-agent-patterns, memory-systems, context-optimization, tool-design, evaluation |
-| [llm-as-judge-skills](examples/llm-as-judge-skills/) | **NEW** Production-ready LLM evaluation tools with TypeScript implementation, 19 passing tests | advanced-evaluation, tool-design, context-fundamentals, evaluation |
+| [llm-as-judge-skills](examples/llm-as-judge-skills/) | Production-ready LLM evaluation tools with TypeScript implementation, 19 passing tests | advanced-evaluation, tool-design, context-fundamentals, evaluation |
+| [book-sft-pipeline](examples/book-sft-pipeline/) | **NEW** Train models to write in any author's style. Includes Gertrude Stein case study with 70% human score on Pangram, $2 total cost | project-development, context-compression, multi-agent-patterns, evaluation |
 
 Each example includes:
 - Complete PRD with architecture decisions
@@ -119,6 +120,21 @@ npm install
 cp env.example .env  # Add OPENAI_API_KEY
 npm test  # Run 19 passing tests
 ```
+
+### Book SFT Pipeline Example
+
+The [book-sft-pipeline](examples/book-sft-pipeline/) example demonstrates training small models (8B) to write in any author's style:
+
+- **Intelligent Segmentation**: Two-tier chunking with overlap for maximum training examples
+- **Prompt Diversity**: 15+ templates to prevent memorization and force style learning
+- **Tinker Integration**: Complete LoRA training workflow with $2 total cost
+- **Validation Methodology**: Modern scenario testing proves style transfer vs content memorization
+
+Includes a complete Gertrude Stein case study with:
+- 592 training examples from one 86,000-word book
+- 97% loss reduction over 15 minutes of training
+- 100% human score on Pangram AI detector
+- Verified original content generation
 
 ## Star History
 
