@@ -136,6 +136,8 @@ Includes a complete Gertrude Stein case study with:
 - 100% human score on Pangram AI detector
 - Verified original content generation
 
+Integrates with context engineering skills: project-development, context-compression, multi-agent-patterns, evaluation.
+
 ## Star History
 
 <img width="3664" height="2648" alt="star-history-20251226" src="https://github.com/user-attachments/assets/b80849df-6b2d-4c2f-84a3-7c8f71d2002c" />
